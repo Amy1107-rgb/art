@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《凝視容顏・解構靈魂》人物畫概念教學與互動教案</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      .print-break { page-break-before: always; }
+      body { background: white !important; color: black !important; }
+      .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
+    }
+    .custom-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); }
+    .custom-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 9999px; }
+    .tab-active { border-bottom: 2px solid #8b5cf6; color: #7c3aed; font-weight: 600; }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased font-sans selection:bg-purple-100 selection:text-purple-900">
+
+  <!-- 頂部導航列 (No Print) -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 no-print transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="p-2 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-lg text-white font-bold text-lg shadow-sm">🎨</span>
+        <div>
+          <h1 class="font-bold text-stone-900 text-base sm:text-lg leading-tight">凝視容顏・解構靈魂</h1>
+          <p class="text-xs text-stone-500">中學視覺藝術概念教案（奇鼎版《人物畫》轉化）</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-1 text-sm font-medium text-stone-600">
+        <a href="#overview" class="px-3 py-1.5 rounded-lg hover:text-purple-600 hover:bg-stone-100 transition">課程總覽</a>
+        <a href="#concepts" class="px-3 py-1.5 rounded-lg hover:text-purple-600 hover:bg-stone-100 transition">核心概念</a>
+        <a href="#modules" class="px-3 py-1.5 rounded-lg hover:text-purple-600 hover:bg-stone-100 transition">分課教案</a>
+        <a href="#picasso" class="px-3 py-1.5 rounded-lg hover:text-purple-600 hover:bg-stone-100 transition">畢卡索軸線</a>
+        <a href="#workshop" class="px-3 py-1.5 rounded-lg hover:text-purple-600 hover:bg-stone-100 transition">創作工作坊</a>
+        <a href="#rubric" class="px-3 py-1.5 rounded-lg hover:text-purple-600 hover:bg-stone-100 transition">評量與學習單</a>
+      </nav>
+      <div class="flex items-center space-x-2">
+        <button onclick="window.print()" class="inline-flex items-center space-x-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-stone-900 text-white hover:bg-stone-800 shadow-sm transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          <span>列印 / 存為 PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero 英雄區 -->
+  <section class="relative bg-gradient-to-b from-stone-100 via-stone-50 to-white pt-12 pb-16 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-semibold mb-4">
+          <span class="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
+          <span>108 課綱視覺藝術跨領域概念教案</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-900 tracking-tight leading-tight mb-4">
+          凝視容顏・解構靈魂<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-rose-600">
+            人物畫的多重視界與自我探索
+          </span>
+        </h2>
+        <p class="text-base sm:text-lg text-stone-600 leading-relaxed mb-6">
+          從文藝復興的古典凝視、巴洛克的光影張力、現實主義的社會關懷，一路走到立體派打破維度與五官的視角革命。引導學生透過藝術鑑賞理解人性，並在多重視角創作中探索自我的立體宇宙。
+        </p>
+        <div class="flex flex-wrap gap-3 text-xs sm:text-sm font-medium text-stone-600">
+          <span class="bg-white border border-stone-200 px-3 py-1.5 rounded-lg shadow-2xs">⏱️ 總課時：5～6 課時</span>
+          <span class="bg-white border border-stone-200 px-3 py-1.5 rounded-lg shadow-2xs">🎯 核心模式：CBCI 概念為本 + UbD 理解為先</span>
+          <span class="bg-white border border-stone-200 px-3 py-1.5 rounded-lg shadow-2xs">👥 適用年段：國中八/九年級、高中視覺藝術</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 內容本體容器 -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- 模組 01：大概念與本質問題 (Big Ideas & EQs) -->
+    <section id="concepts" class="space-y-6">
+      <div class="border-l-4 border-purple-600 pl-4">
+        <h3 class="text-2xl font-bold text-stone-900">核心大概念與本質問題</h3>
+        <p class="text-sm text-stone-500">理解為先（UbD）架構：超越知識記憶，直指藝術本質的深刻探究</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 概念 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs hover:border-purple-300 transition">
+          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-lg mb-4">01</div>
+          <h4 class="font-bold text-stone-900 text-lg mb-2">真實與心靈的鏡像</h4>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">
+            人物畫不單是容貌的客觀複製，而是畫家對個體性格、心理心境、親情人倫以及當時代社會環境的深刻凝視。
+          </p>
+          <div class="bg-stone-50 p-3 rounded-xl border border-stone-100 text-xs text-stone-600">
+            <span class="font-semibold text-purple-700 block mb-1">本質問題 (EQ 1)：</span>
+            在人手一機隨拍隨得的現代，為什麼繪畫依然能傳遞照片難以取代的「靈魂深度」？
+          </div>
+        </div>
+
+        <!-- 概念 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs hover:border-purple-300 transition">
+          <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-lg mb-4">02</div>
+          <h4 class="font-bold text-stone-900 text-lg mb-2">良知與時代的眼淚</h4>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">
+            畫筆可以是社會的良心與抗爭的武器。從底層勞工、流民疾苦到反戰呼號，藝術家以畫像替時代發聲。
+          </p>
+          <div class="bg-stone-50 p-3 rounded-xl border border-stone-100 text-xs text-stone-600">
+            <span class="font-semibold text-indigo-700 block mb-1">本質問題 (EQ 2)：</span>
+            畫家如何運用構圖、陰影與身軀，讓觀者感受到勞動者的尊嚴與戰爭受難者的劇痛？
+          </div>
+        </div>
+
+        <!-- 概念 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs hover:border-purple-300 transition">
+          <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-lg mb-4">03</div>
+          <h4 class="font-bold text-stone-900 text-lg mb-2">視角的解構與重組</h4>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">
+            打破單一透視視角，將正面與側面的多個時空維度同時並置，創造更具心理衝擊力的「立體自我」。
+          </p>
+          <div class="bg-stone-50 p-3 rounded-xl border border-stone-100 text-xs text-stone-600">
+            <span class="font-semibold text-rose-700 block mb-1">本質問題 (EQ 3)：</span>
+            當一張臉被扭曲切碎時，究竟是在破壞美感，還是在揭示內心更複雜的真實面貌？
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模組 02：鑑賞解碼工具箱（觀察人物畫的三把鑰匙） -->
+    <section class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-stone-100 pb-4">
+        <div>
+          <span class="text-xs uppercase tracking-wider font-bold text-purple-600">Observation Framework</span>
+          <h3 class="text-2xl font-bold text-stone-900">人物畫鑑賞工具：觀察的三把鑰匙</h3>
+        </div>
+        <span class="text-xs text-stone-500 mt-1 sm:mt-0">對應簡報第 3 頁：達文西《抱銀貂的女子》案例分析</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border border-stone-200 rounded-2xl p-5 hover:shadow-md transition bg-gradient-to-b from-stone-50 to-white">
+          <div class="flex items-center space-x-2 text-stone-900 font-bold mb-3">
+            <span class="text-xl">👁️</span>
+            <h4>第一把鑰匙：表情與動作</h4>
+          </div>
+          <p class="text-xs font-medium text-purple-700 mb-2">解讀核心：主角的心理心境與情緒狀態</p>
+          <ul class="text-xs text-stone-600 space-y-2 leading-relaxed">
+            <li>• <strong>眼神焦點</strong>：凝視觀者、望向畫外或垂眸冥思？</li>
+            <li>• <strong>面部微表情</strong>：嘴角揚起微動、眉頭深鎖、痛苦張嘴。</li>
+            <li>• <strong>肢體語彙</strong>：緊握的手（緊張/堅毅）、放鬆的姿態、受難般的雙臂開展。</li>
+          </ul>
+        </div>
+
+        <div class="border border-stone-200 rounded-2xl p-5 hover:shadow-md transition bg-gradient-to-b from-stone-50 to-white">
+          <div class="flex items-center space-x-2 text-stone-900 font-bold mb-3">
+            <span class="text-xl">👑</span>
+            <h4>第二把鑰匙：服裝與配件</h4>
+          </div>
+          <p class="text-xs font-medium text-purple-700 mb-2">解讀核心：職業、階級與身分地位標誌</p>
+          <ul class="text-xs text-stone-600 space-y-2 leading-relaxed">
+            <li>• <strong>衣物材質</strong>：絲綢珠寶（皇室貴族） vs 粗布補丁（勞工平民）。</li>
+            <li>• <strong>隨身象徵物</strong>：白銀貂（純潔貴族）、便當水壺（礦工汗水）、樂器（藝人）。</li>
+            <li>• <strong>色彩暗號</strong>：聖母的深藍紅袍、法西斯軍官的冷灰、反抗者的素白衣衫。</li>
+          </ul>
+        </div>
+
+        <div class="border border-stone-200 rounded-2xl p-5 hover:shadow-md transition bg-gradient-to-b from-stone-50 to-white">
+          <div class="flex items-center space-x-2 text-stone-900 font-bold mb-3">
+            <span class="text-xl">🏛️</span>
+            <h4>第三把鑰匙：背景與環境</h4>
+          </div>
+          <p class="text-xs font-medium text-purple-700 mb-2">解讀核心：歷史時空與社會發展的縮影</p>
+          <ul class="text-xs text-stone-600 space-y-2 leading-relaxed">
+            <li>• <strong>空間營造</strong>：封閉擁擠的三等車廂、金碧輝煌的宮廷、暗無天日的坑道。</li>
+            <li>• <strong>光影隱喻</strong>：巴洛克聚光燈效果（命運轉折）、血紅夕陽（心靈崩潰吶喊）。</li>
+            <li>• <strong>時代線索</strong>：背景中的教堂、戰火硝煙、工業煙囪或街頭流民。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模組 03：分課時詳細教學流程 (Tab 切換系統) -->
+    <section id="modules" class="space-y-6">
+      <div class="border-l-4 border-purple-600 pl-4">
+        <h3 class="text-2xl font-bold text-stone-900">單元教學流程與課時教案（共 5~6 課時）</h3>
+        <p class="text-sm text-stone-500">點擊切換各節課進度，查看引起動機、鑑賞探究、提問設計與任務評量</p>
+      </div>
+
+      <!-- Tab 按鈕群 -->
+      <div class="flex space-x-2 border-b border-stone-200 overflow-x-auto custom-scroll pb-1 no-print">
+        <button onclick="switchTab(1)" id="tab-btn-1" class="px-4 py-2.5 text-sm font-semibold whitespace-nowrap tab-active transition">第 1 課時：凝視的密碼</button>
+        <button onclick="switchTab(2)" id="tab-btn-2" class="px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-stone-500 hover:text-stone-800 transition">第 2 課時：時代溫度與吶喊</button>
+        <button onclick="switchTab(3)" id="tab-btn-3" class="px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-stone-500 hover:text-stone-800 transition">第 3 課時：視角的革命</button>
+        <button onclick="switchTab(4)" id="tab-btn-4" class="px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-stone-500 hover:text-stone-800 transition">第 4 課時：自我的多重宇宙</button>
+        <button onclick="switchTab(5)" id="tab-btn-5" class="px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-stone-500 hover:text-stone-800 transition">第 5-6 課時：色彩賦形與策展</button>
+      </div>
+
+      <!-- Tab 內容 1 -->
+      <div id="tab-content-1" class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between flex-wrap gap-2 border-b border-stone-100 pb-3">
+          <h4 class="text-xl font-bold text-stone-900">第 1 課時：凝視的密碼——走進人物畫的世界</h4>
+          <span class="text-xs bg-purple-50 text-purple-700 font-semibold px-3 py-1 rounded-full">簡報範圍：P.1 ~ P.9</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-stone-600">
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-purple-600">●</span> <span>引起動機（7 分鐘）：【攝影快門 vs 畫家筆觸】</span>
+              </h5>
+              <p class="leading-relaxed">展示現代人用手機連拍、濾鏡修圖的日常習慣。提問：「既然現在 0.1 秒就能拍出完美的高畫質人物照，為什麼古代皇帝與貴族甘願端坐幾十個小時讓畫家畫？畫像裡到底藏著照片拍不出的什麼？」</p>
+            </div>
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-purple-600">●</span> <span>核心鑑賞一（15 分鐘）：【人物解碼三把鑰匙】</span>
+              </h5>
+              <p class="leading-relaxed">以達文西《抱銀貂的女子》示範「表情/身姿（心境警惕）」、「刺繡與銀貂（貴族階級）」、「暗黑背景（光影聚焦）」的解讀方法。</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-purple-600">●</span> <span>核心鑑賞二（15 分鐘）：【肖像凝視 vs 群像交響曲】</span>
+              </h5>
+              <ul class="list-disc list-inside space-y-1.5 leading-relaxed">
+                <li><strong>肖像畫</strong>：蒙娜麗莎的眼神流轉、戴珍珠耳環少女的瞬間回眸。</li>
+                <li><strong>情節群像畫</strong>：達文西《最後的晚餐》門徒動態透視、維拉斯奎茲《宮女》（Las Meninas）的畫框與鏡像遊戲、林布蘭《夜巡》光影聚光燈效果。</li>
+              </ul>
+            </div>
+            <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+              <h5 class="font-bold text-stone-900 text-xs uppercase tracking-wide mb-1">課堂學習檢核（8 分鐘）</h5>
+              <p class="text-xs text-stone-600">發下「3分鐘解碼卡」：給出任意人物畫名作局部，引導學生在小組內指出主角眼神在看哪？身上的配件透露了什麼秘密？</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 內容 2 -->
+      <div id="tab-content-2" class="hidden bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between flex-wrap gap-2 border-b border-stone-100 pb-3">
+          <h4 class="text-xl font-bold text-stone-900">第 2 課時：時代的溫度與靈魂的吶喊——從人情溫暖到社會關懷</h4>
+          <span class="text-xs bg-indigo-50 text-indigo-700 font-semibold px-3 py-1 rounded-full">簡報範圍：P.10 ~ P.19</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-stone-600">
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-indigo-600">●</span> <span>人情與溫暖（10 分鐘）：【畫筆裡的親情與日常】</span>
+              </h5>
+              <p class="leading-relaxed"><strong>陳進</strong>（台灣首位女膠彩畫家）：《母愛》、《合奏》、《化妝》細膩刻劃優雅閨秀與母子依偎；<strong>瑪麗・卡薩特</strong>《划船派對》：在家庭變故後以柔和色彩凝結永恆母子溫馨。</p>
+            </div>
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-indigo-600">●</span> <span>社會之眼與底層疾苦（15 分鐘）：【代替文字的良知】</span>
+              </h5>
+              <ul class="list-disc list-inside space-y-1 leading-relaxed">
+                <li><strong>洪瑞麟（台灣礦工畫家）</strong>：《礦工頌》、《吃便當》，以遒勁黑線與汗水泥濘彰顯底層生命尊嚴。</li>
+                <li><strong>杜米埃《三等車廂》</strong>：擁擠車廂裡滿臉皺紋的老婦、疲憊少年與哺乳母親，揭開階級現實。</li>
+                <li><strong>周臣《流民圖》</strong>：明代文人畫少見的街頭流民、形狀怪異乞丐，作為朝廷之「省察之助」。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-indigo-600">●</span> <span>時代悲歌與心靈吶喊（15 分鐘）：【極限情境與表現主義】</span>
+              </h5>
+              <ul class="list-disc list-inside space-y-1.5 leading-relaxed">
+                <li>傑利柯《梅杜莎之筏》極限求生金字塔、戈雅《1808年5月3日的槍殺》反抗者受難張臂。</li>
+                <li><strong>孟克《吶喊》</strong>：日記共讀「火紅的天空像鮮血一樣掛在上面……我感到無盡的吶喊」。探討色彩線條如何直接宣洩內在焦慮。</li>
+              </ul>
+            </div>
+            <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+              <span class="text-xs font-bold text-indigo-900 block mb-1">💡 教師提問引導 (VTS)：</span>
+              <p class="text-xs text-indigo-800">「如果洪瑞麟把礦工畫得像白淨貴族、如果孟克畫一張平靜端莊的臉，這些畫作還能撼動我們的心嗎？」</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 內容 3 -->
+      <div id="tab-content-3" class="hidden bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between flex-wrap gap-2 border-b border-stone-100 pb-3">
+          <h4 class="text-xl font-bold text-stone-900">第 3 課時：視角的革命——畢卡索的變奏人生與形象解構</h4>
+          <span class="text-xs bg-rose-50 text-rose-700 font-semibold px-3 py-1 rounded-full">簡報範圍：P.20 ~ P.36</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-stone-600">
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-rose-600">●</span> <span>藝術神童的叛逆（8 分鐘）：【像孩子一樣畫畫】</span>
+              </h5>
+              <p class="leading-relaxed">比對畢卡索 15 歲古典素描與後期的變形畫作，破解「他是不是不會畫才亂畫」的迷思，體會「打破規則前必須先精通規則」。</p>
+            </div>
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-rose-600">●</span> <span>五大風格演進深度剖析（15 分鐘）</span>
+              </h5>
+              <p class="leading-relaxed"><strong>藍色時期</strong>（孤寂底層）$\rightarrow$ <strong>粉紅時期</strong>（浪漫小丑）$\rightarrow$ <strong>立體派</strong>（幾何解構、多重視點並存）$\rightarrow$ <strong>新古典</strong>（戰後厚實秩序）$\rightarrow$ <strong>變形時期</strong>（潛意識扭曲、五官錯位）。</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-rose-600">●</span> <span>反戰經典象徵密碼（15 分鐘）：【《格爾尼卡》與《哭泣的女人》】</span>
+              </h5>
+              <ul class="list-disc list-inside space-y-1.5 leading-relaxed">
+                <li>《格爾尼卡》四大意象：嘶鳴之馬（苦難平民）、公牛（暴虐強權）、哭泣母親（喪子之痛）、斷劍小花（絕望生機）。</li>
+                <li>《哭泣的女人》朵拉・瑪爾：鋸齒狀碎片面容、多角度撕裂情感，展現轟炸浩劫下的精神崩解。</li>
+              </ul>
+            </div>
+            <div class="bg-rose-50 p-4 rounded-xl border border-rose-100">
+              <span class="text-xs font-bold text-rose-900 block mb-1">🌱 凝視晚年（5 分鐘）：</span>
+              <p class="text-xs text-rose-800">展示畢卡索 90 歲臨終自畫像中巨大恐懼的雙眸，引導學生思考：藝術家到最後一刻都在用畫筆直面生命與死亡。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 內容 4 -->
+      <div id="tab-content-4" class="hidden bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between flex-wrap gap-2 border-b border-stone-100 pb-3">
+          <h4 class="text-xl font-bold text-stone-900">第 4 課時：自我的多重宇宙——立體派多視角自畫像構思打稿</h4>
+          <span class="text-xs bg-amber-50 text-amber-700 font-semibold px-3 py-1 rounded-full">簡報範圍：P.37 ~ P.41</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-stone-600">
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-amber-600">●</span> <span>學生範例解構（10 分鐘）：【神仙公式拆解】</span>
+              </h5>
+              <p class="leading-relaxed">解析簡報第 37~39 頁學生優秀作品：半臉正視 + 半臉側視的嵌合結構，左右代表不同的性格面向（如天使/惡魔、球衣運動狂/耳機音樂宅）。</p>
+            </div>
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-amber-600">●</span> <span>構思工作坊（15 分鐘）：【我心中的雙重面孔】</span>
+              </h5>
+              <p class="leading-relaxed">填寫自我概念心智圖，決定面孔左右兩側的主題、象徵配件（眼鏡、首飾、動漫圖騰）與表情差異。</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-amber-600">●</span> <span>背景語言二選一（10 分鐘）：【慕夏風 vs 梵谷風】</span>
+              </h5>
+              <ul class="list-disc list-inside space-y-1.5 leading-relaxed">
+                <li><strong>慕夏風格（P.40）</strong>：新藝術花草蔓藤、幾何星象圓形徽章光環，適合細膩工整的自我。</li>
+                <li><strong>梵谷風格（P.41）</strong>：濃烈旋渦筆觸、同心圓星光與情感波紋，適合充沛熱情的自我。</li>
+              </ul>
+            </div>
+            <div class="bg-amber-50 p-4 rounded-xl border border-amber-100">
+              <span class="text-xs font-bold text-amber-900 block mb-1">✏️ 打稿巡堂指導重點（10 分鐘）：</span>
+              <p class="text-xs text-amber-800">督導學生「臉孔需佔畫面 1/2 以上」；確保側臉鼻子輪廓真正做為切割線，避免只是一張正臉畫條黑線。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 內容 5 -->
+      <div id="tab-content-5" class="hidden bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 space-y-6">
+        <div class="flex items-center justify-between flex-wrap gap-2 border-b border-stone-100 pb-3">
+          <h4 class="text-xl font-bold text-stone-900">第 5-6 課時：色彩賦形與靈魂策展——完稿、自述與互評展示</h4>
+          <span class="text-xs bg-emerald-50 text-emerald-700 font-semibold px-3 py-1 rounded-full">教學目標：實踐表現、鑑賞互評</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-stone-600">
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-emerald-600">●</span> <span>色彩賦形實作（第 5 課時整 + 第 6 課時前 20 分）：【情緒對比】</span>
+              </h5>
+              <ul class="list-disc list-inside space-y-1 leading-relaxed">
+                <li>冷暖對比配置（左半暖橙/右半冷青藍）。</li>
+                <li>異材質複合技法（色鉛筆漸層 + 奇異筆粗邊線 + 紋理拼貼）。</li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-emerald-600">●</span> <span>撰寫「藝術家自述卡 (Artist Statement)」（10 分鐘）</span>
+              </h5>
+              <p class="leading-relaxed">引導學生寫下作品名稱、兩個面向的象徵符號寓意，以及「我想對這個世界說的一句話」。</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-bold text-stone-900 flex items-center space-x-1 mb-1">
+                <span class="text-emerald-600">●</span> <span>班級策展「靈魂美術館」（15 分鐘）</span>
+              </h5>
+              <p class="leading-relaxed">全班作品掛於四周黑板或展板，進行「靜默美術館」漫遊。每位同學發 2 張便利貼，為引發共鳴的作品寫下讚賞與提問。</p>
+            </div>
+            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100">
+              <span class="text-xs font-bold text-emerald-900 block mb-1">🏆 評量與結語總結（5 分鐘）：</span>
+              <p class="text-xs text-emerald-800">教師引導總結：每一位同學都成功超越了「像不像」的單一標準，看見彼此心中的豐富維度。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模組 04：畢卡索時光軸與風格轉折 (Visual Timeline) -->
+    <section id="picasso" class="bg-stone-900 text-stone-100 rounded-3xl p-6 sm:p-8 space-y-6">
+      <div class="border-b border-stone-800 pb-4">
+        <span class="text-xs uppercase tracking-wider font-bold text-purple-400">Master In Focus</span>
+        <h3 class="text-2xl font-bold text-white">畢卡索的多重變奏時光軸</h3>
+        <p class="text-xs text-stone-400 mt-1">「我用盡一生的時間，才能像孩子一樣的畫畫。」——畢卡索一生關鍵創作期全覽</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div class="bg-stone-800/80 border border-stone-700 p-4 rounded-2xl flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono text-purple-400 block mb-1">1901 - 1904</span>
+            <h4 class="font-bold text-white text-base mb-2">藍色時期</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">好友卡薩吉馬斯自盡後陷入沉鬱。畫面以冷冽藍綠調為主，凝視盲人、老乞丐、孤獨者等社會底層受難者。</p>
+          </div>
+          <div class="mt-3 text-[11px] bg-stone-900/60 p-2 rounded-lg text-stone-400">代表作：《自畫像》、《老吉他手》</div>
+        </div>
+
+        <div class="bg-stone-800/80 border border-stone-700 p-4 rounded-2xl flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono text-rose-400 block mb-1">1904 - 1906</span>
+            <h4 class="font-bold text-white text-base mb-2">粉紅色時期</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">在蒙馬特邂逅愛情，色調轉為溫暖粉紅與橙色。題材轉向馬戲團雜耍表演者、流浪丑角與溫柔母子。</p>
+          </div>
+          <div class="mt-3 text-[11px] bg-stone-900/60 p-2 rounded-lg text-stone-400">代表作：《雜耍家庭與猴子》</div>
+        </div>
+
+        <div class="bg-stone-800/80 border border-stone-700 p-4 rounded-2xl flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono text-amber-400 block mb-1">1907 - 1919</span>
+            <h4 class="font-bold text-white text-base mb-2">立體主義時期</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">受非洲面具啟發，與布拉克創立立體派。將物體解構為幾何塊面，同時呈現多重視角；後發展出綜合拼貼。</p>
+          </div>
+          <div class="mt-3 text-[11px] bg-stone-900/60 p-2 rounded-lg text-stone-400">代表作：《亞維農的少女》、《三樂師》</div>
+        </div>
+
+        <div class="bg-stone-800/80 border border-stone-700 p-4 rounded-2xl flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono text-sky-400 block mb-1">1917 - 1924</span>
+            <h4 class="font-bold text-white text-base mb-2">新古典主義</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">一戰後「回歸秩序」浪潮，轉向古希臘羅馬與文藝復興和諧美感，人物造型厚實飽滿、體量感純潔理性。</p>
+          </div>
+          <div class="mt-3 text-[11px] bg-stone-900/60 p-2 rounded-lg text-stone-400">代表作：《母與子》、《海灘奔跑的女子》</div>
+        </div>
+
+        <div class="bg-stone-800/80 border border-stone-700 p-4 rounded-2xl flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono text-emerald-400 block mb-1">1924 - 1937+</span>
+            <h4 class="font-bold text-white text-base mb-2">變形與反戰</h4>
+            <p class="text-xs text-stone-300 leading-relaxed">融入超現實主義與潛意識，人體比例極度扭曲、五官正面側面擠壓。以《格爾尼卡》與《哭泣的女人》控訴殘酷浩劫。</p>
+          </div>
+          <div class="mt-3 text-[11px] bg-stone-900/60 p-2 rounded-lg text-stone-400">代表作：《夢》、《朵拉瑪》、《格爾尼卡》</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模組 05：學生創作互動發想器 (Interactive Brainstorming Tool) -->
+    <section id="workshop" class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-6">
+      <div class="border-b border-stone-100 pb-4">
+        <span class="text-xs uppercase tracking-wider font-bold text-purple-600">Student Workshop Engine</span>
+        <h3 class="text-2xl font-bold text-stone-900">課堂互動發想器：「解構我的雙面心靈」</h3>
+        <p class="text-xs text-stone-500 mt-1">教師可投影於電子白板，讓學生上台或在平板上輸入特質，快速生成自畫像設計關鍵字</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- 輸入區 -->
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">【面向 A】：白天/外在的我（例如：幽默搞笑、好動熱情、班級幹部）</label>
+            <input type="text" id="trait-a" value="開朗活潑、喜歡跟朋友打鬧" class="w-full text-sm border border-stone-300 rounded-xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-purple-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">【面向 B】：深夜/內在的我（例如：多愁善感、愛戴耳機發呆、害怕孤單）</label>
+            <input type="text" id="trait-b" value="安靜獨處、聽著耳機沉浸在自己的宇宙" class="w-full text-sm border border-stone-300 rounded-xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-purple-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">我的代表愛好或象徵物（例如：籃球、吉他、貓咪、動漫角色）</label>
+            <input type="text" id="symbols" value="藍牙耳機、籃球衣、星空、小貓" class="w-full text-sm border border-stone-300 rounded-xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-purple-500">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">背景裝飾偏好</label>
+            <select id="bg-style" class="w-full text-sm border border-stone-300 rounded-xl px-3.5 py-2.5 focus:outline-none focus:ring-2 focus:ring-purple-500">
+              <option value="mucha">慕夏風格（新藝術裝飾蔓藤、星座圓環幾何框）</option>
+              <option value="vangogh">梵谷風格（情感旋渦筆觸、旋轉星夜金色星芒）</option>
+            </select>
+          </div>
+          <button onclick="generateInspiration()" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-xl shadow-xs transition">
+            ✨ 立即生成我的立體派自畫像設計配方
+          </button>
+        </div>
+
+        <!-- 輸出預覽卡片 -->
+        <div id="result-box" class="bg-gradient-to-br from-stone-50 to-purple-50/30 border border-purple-200/60 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-purple-100 pb-3 mb-4">
+              <span class="text-xs font-bold text-purple-700">【自畫像概念設計卡】</span>
+              <span class="text-xs text-stone-400">即時預覽</span>
+            </div>
+            <div class="space-y-3 text-xs sm:text-sm">
+              <p><strong>🎭 左半邊（正面視角）：</strong><span id="out-left" class="text-purple-900 font-medium">展現開朗活潑面貌，建議採用暖黃色調，搭配微笑唇角與大眼睛</span></p>
+              <p><strong>🌙 右半邊（側面視角）：</strong><span id="out-right" class="text-indigo-900 font-medium">展現安靜沉思面貌，利用深藍冷色調，鼻樑拉長作為切分中軸</span></p>
+              <p><strong>💎 融入象徵物：</strong><span id="out-symbols" class="text-stone-700 font-medium">將藍牙耳機掛於側臉耳際，球衣號碼化為幾何圖騰填於衣領</span></p>
+              <p><strong>🌌 背景語彙：</strong><span id="out-bg" class="text-stone-700 font-medium">慕夏風圓形星盤光環環繞頭部，外圈填滿曼妙蔓藤植物紋樣</span></p>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-purple-100 text-xs text-stone-500 italic">
+            提示：點擊按鈕即可根據上方輸入更新此設計卡！
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模組 06：評量量規與學習單 (Assessment Rubrics & Printables) -->
+    <section id="rubric" class="space-y-8">
+      <div class="border-l-4 border-purple-600 pl-4">
+        <h3 class="text-2xl font-bold text-stone-900">多元學習評量量規（Assessment Rubrics）</h3>
+        <p class="text-sm text-stone-500">落實質性評量與自述反思（總分 100 分）</p>
+      </div>
+
+      <!-- 表格 -->
+      <div class="overflow-x-auto rounded-2xl border border-stone-200 shadow-xs bg-white">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead>
+            <tr class="bg-stone-100/80 text-stone-800 border-b border-stone-200">
+              <th class="p-3.5 font-bold w-1/5">評量向度 (權重)</th>
+              <th class="p-3.5 font-bold text-emerald-800 bg-emerald-50/50 w-1/5">優秀 (90-100分)</th>
+              <th class="p-3.5 font-bold text-blue-800 bg-blue-50/50 w-1/5">良好 (80-89分)</th>
+              <th class="p-3.5 font-bold text-amber-800 bg-amber-50/50 w-1/5">尚可 (70-79分)</th>
+              <th class="p-3.5 font-bold text-stone-600 w-1/5">待加強 (60-69分)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-100 text-stone-600">
+            <tr>
+              <td class="p-3.5 font-bold text-stone-900 bg-stone-50/50">
+                鑑賞與概念理解<br><span class="text-xs text-purple-600 font-semibold">(25%)</span>
+              </td>
+              <td class="p-3.5 bg-emerald-50/30">精準運用「表情/服飾/環境」三要素深度解讀作品，深刻體會社會關懷與多視角革命本質。</td>
+              <td class="p-3.5 bg-blue-50/30">能大致運用三要素分析作品，理解畢卡索與各流派之基本概念。</td>
+              <td class="p-3.5 bg-amber-50/30">僅能說出部分觀察點，對歷史背景與流派核心概念理解較為零碎。</td>
+              <td class="p-3.5">未能掌握人物畫觀察要領，概念混淆或無法回答。</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-stone-900 bg-stone-50/50">
+                構圖與視角解構<br><span class="text-xs text-purple-600 font-semibold">(30%)</span>
+              </td>
+              <td class="p-3.5 bg-emerald-50/30">巧妙嵌合正側雙重視角，五官錯位極具張力且比例和諧，人物佔據畫面 1/2 以上，極富創意。</td>
+              <td class="p-3.5 bg-blue-50/30">具備明確的正側視角結合特徵，五官有適度拆解重組，畫面構圖飽滿。</td>
+              <td class="p-3.5 bg-amber-50/30">僅在普通正臉中央畫分界線，未展現立體派解構精髓，構圖稍顯單調。</td>
+              <td class="p-3.5">未嘗試多視角手法，構圖偏小或比例嚴重失衡。</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-stone-900 bg-stone-50/50">
+                色彩與筆觸技法<br><span class="text-xs text-purple-600 font-semibold">(25%)</span>
+              </td>
+              <td class="p-3.5 bg-emerald-50/30">熟練運用冷暖強烈對比色彰顯雙重情緒，背景融入精緻慕夏蔓藤或梵谷星空旋渦筆觸。</td>
+              <td class="p-3.5 bg-blue-50/30">色彩對應主題情緒且塗色均勻，背景具備裝飾層次與細節。</td>
+              <td class="p-3.5 bg-amber-50/30">色彩搭配較單一，塗色稍顯毛躁，背景紋理較為簡略。</td>
+              <td class="p-3.5">未完成上色，或未展現色彩的情緒象徵意涵。</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-stone-900 bg-stone-50/50">
+                自述表達與展演<br><span class="text-xs text-purple-600 font-semibold">(20%)</span>
+              </td>
+              <td class="p-3.5 bg-emerald-50/30">自述卡真摯深刻，能闡明符號隱喻；熱情參與策展漫遊並給予同儕建設性讚賞。</td>
+              <td class="p-3.5 bg-blue-50/30">自述卡書寫完整通順，能清楚說明創作緣由，主動參與觀摩。</td>
+              <td class="p-3.5 bg-amber-50/30">自述字數過簡，互動觀摩過程中表現較為被動。</td>
+              <td class="p-3.5">未繳交自述卡，未參與展覽發表與回饋活動。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 學生自述卡範本 (可列印) -->
+      <div class="bg-stone-50 border-2 border-dashed border-stone-300 rounded-3xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center justify-between border-b border-stone-200 pb-3">
+          <h4 class="font-bold text-stone-900 text-lg">學生策展必備：【藝術家自述卡 (Artist Statement)】列印樣板</h4>
+          <span class="text-xs text-stone-500">佈展時黏貼於作品右下方</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-3 bg-white rounded-xl border border-stone-200">
+            <span class="font-bold text-stone-700 block mb-1">【作品名稱】</span>
+            <div class="h-6 border-b border-stone-300"></div>
+          </div>
+          <div class="p-3 bg-white rounded-xl border border-stone-200">
+            <span class="font-bold text-stone-700 block mb-1">【創作者班級 / 姓名】</span>
+            <div class="h-6 border-b border-stone-300"></div>
+          </div>
+        </div>
+        <div class="p-4 bg-white rounded-xl border border-stone-200 space-y-3 text-xs sm:text-sm">
+          <p><strong>🎭 我所拆解的自我雙重性：</strong></p>
+          <p class="text-stone-500">・左側代表我的：_________________（色彩運用：___________；象徵符號：___________）</p>
+          <p class="text-stone-500">・右側代表我的：_________________（色彩運用：___________；象徵符號：___________）</p>
+          <p class="pt-2"><strong>💬 我想透過這幅自畫像對這個世界說的一句話：</strong></p>
+          <div class="h-10 border-b border-stone-300"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 頁腳 -->
+  <footer class="bg-white border-t border-stone-200 mt-20 py-8 no-print">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-stone-500 space-y-2">
+      <p>《凝視容顏・解構靈魂》視覺藝術概念教案網站</p>
+      <p>依據 115 上奇鼎版視覺藝術教材研發設計・支援全螢幕簡報投影與 A4 格式排版列印</p>
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(num) {
+      for (let i = 1; i <= 5; i++) {
+        const content = document.getElementById('tab-content-' + i);
+        const btn = document.getElementById('tab-btn-' + i);
+        if (i === num) {
+          content.classList.remove('hidden');
+          btn.className = 'px-4 py-2.5 text-sm font-semibold whitespace-nowrap tab-active transition';
+        } else {
+          content.classList.add('hidden');
+          btn.className = 'px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-stone-500 hover:text-stone-800 transition';
+        }
+      }
+    }
+
+    function generateInspiration() {
+      const traitA = document.getElementById('trait-a').value.trim() || '陽光的一面';
+      const traitB = document.getElementById('trait-b').value.trim() || '深沉的一面';
+      const symbols = document.getElementById('symbols').value.trim() || '個人隨身物品';
+      const bgStyle = document.getElementById('bg-style').value;
+
+      document.getElementById('out-left').innerText = `呈現「${traitA}」，建議採鮮活暖色系（金黃、明橘），配以放鬆或微笑的正面五官。`;
+      document.getElementById('out-right').innerText = `呈現「${traitB}」，建議以冷調深色（群青、深紫）打底，鼻樑與側唇勾出深思側顏。`;
+      document.getElementById('out-symbols').innerText = `將「${symbols}」巧妙化解為裝飾符號，可穿插在髮絲紋理或胸前幾何衣領中。`;
+
+      if (bgStyle === 'mucha') {
+        document.getElementById('out-bg').innerText = '慕夏風典雅光環：頭部後方繪製神聖圓形圖徽，四周以蔓藤、星象或植物連續圖案襯托。';
+      } else {
+        document.getElementById('out-bg').innerText = '梵谷風情緒夜空：背景填滿流動旋渦筆觸，同心圓星光呼應內心激盪的情感。';
+      }
+
+      const resBox = document.getElementById('result-box');
+      resBox.classList.add('ring-2', 'ring-purple-400');
+      setTimeout(() => resBox.classList.remove('ring-2', 'ring-purple-400'), 600);
+    }
+  </script>
+</body>
+</html>
